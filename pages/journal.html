@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/0bf422052a.js" crossorigin="anonymous"></script>
+    <title>Journals - Publish your story</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/icons.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <!-- <li><a href="#">Home</a></li> -->
+            <li><a href="journal.html">Journals</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <h2>Create Journal</h2>
+        <h4>Write a story!</h4>
+        <br>
+        <form method="post" action="../php/create_journal.php">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <textarea name="content" id="content" cols="90" rows="10" placeholder="Your journal entry"></textarea>
+            <div class="buttons">
+                <button type="submit"><h4>publish</h4></button>
+                <label class="file-input-label" for="file-input"><i class="fas fa-images"></i></label>
+                <input type="file" id="file-input" name="file-input" class="file-input">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your meta tags and other head content here -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/icons.css">
+    <script src="https://kit.fontawesome.com/0bf422052a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <!-- <li><a href="#">Home</a></li> -->
+            <li><a href="../index.html">Journals</a></li>
+            <li><a href="pages/account.html">Account</a></li>
+        </ul>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-avatar-container">
+                <img src="../images/001-boy.svg" alt="Boy Avatar 1" class="profile-avatar active" onclick="selectAvatar(this, 'avatar1.jpg')">
+                <img src="../images/014-girl-7.svg" alt="Girl Avatar 2" class="profile-avatar" onclick="selectAvatar(this, 'avatar2.jpg')">
+                <img src="../images/018-girl-9.svg" alt="Girl Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar3.jpg')">
+                <img src="../images/043-boy-18.svg" alt="Boy Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar4.jpg')">
+                <img src="../images/047-girl-25.svg" alt="Girl Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar5.jpg')">
+            </div>
+            <h2 class="profile-name" id="profileName">John Doe</h2>
+            <button class="save-button" onclick="saveChanges()">Save Changes</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedAvatar = document.querySelector('.profile-avatar.active');
+
+        function selectAvatar(avatarElement, avatarUrl) {
+            if (selectedAvatar) {
+                selectedAvatar.classList.remove('active');
+            }
+            selectedAvatar = avatarElement;
+            selectedAvatar.classList.add('active');
+        }
+
+        function updateUsername(username) {
+            const profileName = document.getElementById('profileName');
+            profileName.textContent = username;
+        }
+
+        function saveChanges() {
+            // Code to save changes goes here
+            alert("Changes saved!");
+        }
+    </script>
+</body>
+</html>

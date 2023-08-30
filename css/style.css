@@ -1,0 +1,374 @@
+::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 3px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+
+
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #f5f8fa;
+    color: #181c32;
+    font-family: "Euclid Circular A", "Poppins";
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8fa;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent; /* Add a transparent border */
+    transition: border-color 0.3s ease; /* Add transition for border color change */
+}
+
+.profile-avatar.active {
+    border-color: #009ef7; /* Change border color when active */
+}
+
+.profile-name {
+    font-size: 24px;
+    margin-bottom: 3% ;
+    font-weight: bold;
+    color: black;
+}
+
+.card form input[type="text"],
+        .card form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+.save-button {
+    background-color: #009ef7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.save-button:hover {
+    background-color: #007acc;
+}
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8fa;
+}
+
+.login-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    color: #009ef7;
+    font-size: large;
+    font-weight: 700;
+}
+
+.login-input {
+    width: 90%;
+    padding: 12px;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: transparent;
+    font-size: 13px;
+    transition: border-color 0.3s ease;
+}
+
+.login-input:focus {
+    border-color: #009ef7;
+    outline: none;
+}
+
+.login-button {
+    background-color: #009ef7;
+    color: white;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #007acc;
+}
+
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    color: #a1a5b7;
+    font-size: 19   px;
+}
+
+table {
+    width: 100%;
+}
+
+table tr td {
+    padding: 10px 0;
+}
+
+.td-1{
+    width: 10%;
+}
+
+.td-2 {
+    width: 40%;
+}
+
+.td-3 {
+    width: 30%;
+}
+
+.inline-i {
+    display: flex;
+    gap: 30px;
+}
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    width: 40%;
+}
+
+.card-container {
+    max-height: 196px;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card header button {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.stars img {
+    width: 16px;
+    height: 16px;
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+    color: #a1a5b7;
+    margin-right: 10px;
+}
+
+.buttons a {
+    color: #009ef7;
+    text-decoration: none;
+}
+
+.file-input-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-input-label i {
+    font-size: 24px;
+    color: #009ef7;
+}
+
+.file-input {
+    display: none;
+}
+
+.buttons button.active {
+    background: #ecf5fd;
+    color: #009ef7;
+}
+
+.tables {
+    position: relative;
+    height: 250px;
+    overflow-y: auto;
+}
+
+table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    animation: table-out 0.2s both;
+}
+
+table tr:nth-child(2) {
+    width: 10%;
+}
+
+table tr td:last-child {
+    text-align: right;
+}
+
+@keyframes table-in {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes table-out {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+table.active {
+    animation: table-in 0.2s 0.2s both;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #009ef7;
+    padding: 8px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
