@@ -24,13 +24,13 @@
         <h2>Create Journal</h2>
         <h4>Write a story!</h4>
         <br>
-        <form method="post" action="../php/create_journal.php">
+        <form method="post" action="../php/create_journal.php" enctype="multipart/form-data">
             <input type="text" name="title" id="title" placeholder="Title">
             <textarea name="content" id="content" cols="90" rows="10" placeholder="Your journal entry"></textarea>
             <div class="buttons">
-                <button type="submit"><h4>publish</h4></button>
+                <button type="submit" name="submit"><h4>publish</h4></button>
                 <label class="file-input-label" for="file-input"><i class="fas fa-images"></i></label>
-                <input type="file" id="file-input" name="file-input" class="file-input" accept="image/*,video/*">
+                <input type="file" id="file-input" name="file" class="file-input">
                 <div id="image-preview"></div>
             </div>
         </form>

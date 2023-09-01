@@ -6,9 +6,33 @@
     $journaltitle = $_POST['title'];
     $journalcontent = $_POST['content'];
     $username =   $_SESSION["username"];
-    $img = $_POST['img'];
-    $sql = "INSERT INTO journals(`title`, `content`,`username`,`img` ) VALUES ('$journaltitle','$journalcontent','$username', '$img')";
-    $result = $conn->query($sql);
 
-    header('location:../index.php')
+
+    $targetDir = '../images/';
+
+    if (isset($_POST['submit'])) {
+        
+
+        if (!empty($_FILES['file']['name'])) {
+            $photoFile = $_FILES['file'];
+
+            $photoName = $_FILES['file']['name'];
+            $photoTmpName = $_FILES['file']['tmp_name'];
+            $photoType = $_FILES['file']['type'];
+
+            $targetPath = $targetDir . $photoName;
+
+            if (move_uploaded_file($photoTmpName, $targetPath)) {
+                $sql = "INSERT INTO journals(`title`, `content`,`username`,`img` ) VALUES ('$journaltitle','$journalcontent','$username', '$photoName')";
+        $result = $conn->query($sql);
+            } else {
+                echo "error";
+            }
+
+        }
+
+        
+    
+        header('location:../index.php');
+    }
 ?>

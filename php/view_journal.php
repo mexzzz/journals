@@ -20,7 +20,7 @@
            require_once "db_connection.php";
             $journalID = $_GET['ID'];
            // Query to fetch blog posts
-           $sql = "SELECT title, content FROM journals WHERE ID = '$journalID'";
+           $sql = "SELECT title, content, img FROM journals WHERE ID = '$journalID'";
            $result = $conn->query($sql);
 
 
@@ -44,6 +44,7 @@
         <form>
             <input type="text" disabled name="title" id="title" value="<?= $journalsArray['title'] ?>">
             <textarea name="content" disabled id="content" cols="90" rows="10"><?= $journalsArray['content'] ?></textarea>
+            <div id="image-preview"><img src="../images/<?= $journalsArray['img']; ?>" alt=""></div>
         </form>
     </div>
 </body>
