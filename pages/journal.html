@@ -30,9 +30,50 @@
             <div class="buttons">
                 <button type="submit"><h4>publish</h4></button>
                 <label class="file-input-label" for="file-input"><i class="fas fa-images"></i></label>
-                <input type="file" id="file-input" name="file-input" class="file-input">
+                <input type="file" id="file-input" name="file-input" class="file-input" accept="image/*,video/*">
+                <div id="image-preview"></div>
             </div>
         </form>
     </div>
+
+    <script>
+        function previewFile() {
+            const fileInput = document.getElementById('file-input');
+            const imagePreview = document.getElementById('image-preview');
+    
+            if (fileInput.files && fileInput.files[0]) {
+                const file = fileInput.files[0];
+                if (file.type.startsWith('image')) {
+                    const reader = new FileReader();
+    
+                    reader.onload = function (e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.maxWidth = '100%';
+                        img.style.maxHeight = '200px'; // Set the maximum height
+                        imagePreview.innerHTML = '';
+                        imagePreview.appendChild(img);
+                    };
+    
+                    reader.readAsDataURL(file);
+                } else if (file.type.startsWith('video')) {
+                    const video = document.createElement('video');
+                    video.src = URL.createObjectURL(file);
+                    video.controls = true;
+                    video.style.maxWidth = '100%';
+                    video.style.maxHeight = '300px'; // Set the maximum height
+                    imagePreview.innerHTML = '';
+                    imagePreview.appendChild(video);
+                }
+            } else {
+                imagePreview.innerHTML = '';
+            }
+        }
+    
+        // Call the previewFile function when the input changes
+        const fileInput = document.getElementById('file-input');
+        fileInput.addEventListener('change', previewFile);
+    </script>
+    
 </body>
 </html>

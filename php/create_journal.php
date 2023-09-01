@@ -6,7 +6,8 @@
     $journaltitle = $_POST['title'];
     $journalcontent = $_POST['content'];
     $username =   $_SESSION["username"];
-    $sql = "INSERT INTO journals(`title`, `content`,`username` ) VALUES ('$journaltitle','$journalcontent','$username')";
+    $img = $_POST['img'];
+    $sql = "INSERT INTO journals(`title`, `content`,`username`,`img` ) VALUES ('$journaltitle','$journalcontent','$username', '$img')";
     $result = $conn->query($sql);
 
     header('location:../index.php')

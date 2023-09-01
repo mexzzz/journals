@@ -48,8 +48,8 @@ if ($result->num_rows > 0) {
     <article class="card">
         <header>
             <div>
-                <h2>New Journals</h2>
-                <h4>More than 4 new journals</h4>
+                <h2 class='typewriter'></h2>
+                <h4>Explore other journals</h4>
             </div>
             <div class="buttons">
                 <button class="active" onclick="selectList(this, 0)">Month</button>
@@ -86,240 +86,24 @@ if ($result->num_rows > 0) {
                             </td>
                             <td>
                               <div class="inline-i">
-                                <a href="" class=""><i class="fa-solid fa-eye"></i></a>
+                                <a href="/journals/php/view_journal.php?ID=<?= $journal['ID']?>" class=""><i class="fa-solid fa-eye"></i></a>
                                 <a href="/journals/php/delete.php?ID=<?= $journal['ID']?>" class=""><i class="fa-solid fa-trash"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-marker"></i></a>
+                                <a href="/journals/php/edit_journal.php?ID=<?= $journal['ID']?>" class=""><i class="fa-solid fa-marker"></i></a>
                               </div>
                             </td>
                         </tr>
                       <?php
                       }
                         ?>
-                        <!-- <tr>
-                            <td>
-                                <img class="avatar" src="images/043-boy-18.svg" />
-                            </td>
-                            <td>
-                                <h3>My past</h3>
-                                <h4>Bo Larsson</h4>
-                            </td>
-                            <td>
-                                <h4>Rating</h4>
-                                <div class="stars">
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                </div>
-                            </td>
-                            <td>
-                              <div class="inline-i">
-                                <a href="" class=""><i class="fa-solid fa-eye"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-trash"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-marker"></i></a>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img class="avatar" src="images/043-boy-18.svg" />
-                            </td>
-                            <td>
-                                <h3>My past</h3>
-                                <h4>Bo Larsson</h4>
-                            </td>
-                            <td>
-                                <h4>Rating</h4>
-                                <div class="stars">
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                </div>
-                            </td>
-                            <td>
-                              <div class="inline-i">
-                                <a href="" class=""><i class="fa-solid fa-eye"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-trash"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-marker"></i></a>
-                              </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img class="avatar" src="images/043-boy-18.svg" />
-                            </td>
-                            <td>
-                                <h3>My past</h3>
-                                <h4>Bo Larsson</h4>
-                            </td>
-                            <td>
-                                <h4>Rating</h4>
-                                <div class="stars">
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-1.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                    <img src="images/star-0.svg" />
-                                </div>
-                            </td>
-                            <td>
-                              <div class="inline-i">
-                                <a href="" class=""><i class="fa-solid fa-eye"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-trash"></i></a>
-                                <a href="" class=""><i class="fa-solid fa-marker"></i></a>
-                              </div>
-                            </td>
-                        </tr> -->
                     </tbody>
                 </div>
             </table>
             <table>
                 <tbody class="active">
-                    <!-- <tr>
-              <td>
-                <img class="avatar" src="img/014-girl-7.svg" />
-              </td>
-              <td>
-                <h3>Shannon Drake</h3>
-                <h4>Copywriter</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-0.svg" />
-                  <img src="images/star-0.svg" />
-                  <img src="images/star-0.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr> -->
-                    <!-- <tr>
-              <td>
-                <img class="avatar" src="img/018-girl-9.svg" />
-              </td>
-              <td>
-                <h3>Taylor Drift</h3>
-                <h4>Art Director</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-0.svg" />
-                  <img src="images/star-0.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr> -->
-                    <!-- <tr>
-              <td>
-                <img class="avatar" src="img/001-boy.svg" />
-              </td>
-              <td>
-                <h3>Peter Rose</h3>
-                <h4>Photographer</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr> -->
                 </tbody>
             </table>
             <table>
                 <tbody class="active">
-                    <!-- <tr>
-              <td>
-                <img class="avatar" src="img/047-girl-25.svg" />
-              </td>
-              <td>
-                <h3>Kate Best</h3>
-                <h4>Developer</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-0.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img class="avatar" src="img/043-boy-18.svg" />
-              </td>
-              <td>
-                <h3>Ben North</h3>
-                <h4>UX Designer</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-0.svg" />
-                  <img src="images/star-0.svg" />
-                  <img src="images/star-0.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <img class="avatar" src="img/018-girl-9.svg" />
-              </td>
-              <td>
-                <h3>Claire Tait</h3>
-                <h4>UI Engineer</h4>
-              </td>
-              <td>
-                <h4>Rating</h4>
-                <div class="stars">
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-1.svg" />
-                  <img src="images/star-0.svg" />
-                </div>
-              </td>
-              <td>
-                <img class="social" src="img/twitter.svg" />
-                <img class="social" src="img/facebook.svg" />
-              </td>
-            </tr> -->
                 </tbody>
             </table>
         </div>
