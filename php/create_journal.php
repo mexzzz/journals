@@ -23,14 +23,14 @@
             $targetPath = $targetDir . $photoName;
 
             if (move_uploaded_file($photoTmpName, $targetPath)) {
-                $sql = "INSERT INTO journals(`title`, `content`,`username`,`img` ) VALUES ('$journaltitle','$journalcontent','$username', '$photoName')";
-        $result = $conn->query($sql);
+                
             } else {
                 echo "error";
             }
 
         }
-
+$sql = "INSERT INTO journals(`title`, `content`,`username`,`img` ) VALUES ('$journaltitle','$journalcontent','$username', '$photoName')";
+        $result = $conn->query($sql);
         
     
         header('location:../index.php');

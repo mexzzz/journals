@@ -15,7 +15,7 @@
         </ul>
     </div>
 
-    <div class="profile-container">
+    <!-- <div class="profile-container">
         <div class="profile-card">
             <div class="profile-avatar-container">
                 <img src="../images/001-boy.svg" alt="Boy Avatar 1" class="profile-avatar active" onclick="selectAvatar(this, 'avatar1.jpg')">
@@ -27,7 +27,26 @@
             <h2 class="profile-name" id="profileName">John Doe</h2>
             <button class="save-button" onclick="saveChanges()">Save Changes</button>
         </div>
-    </div>
+    </div> -->
+
+    <form id="avatarForm" method="POST" action="../php/update_avatar.php">
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-avatar-container">
+                    <img src="../images/001-boy.svg" alt="Boy Avatar 1" class="profile-avatar active" onclick="selectAvatar(this, 'avatar1.jpg')">
+                    <img src="../images/014-girl-7.svg" alt="Girl Avatar 2" class="profile-avatar" onclick="selectAvatar(this, 'avatar2.jpg')">
+                <img src="../images/018-girl-9.svg" alt="Girl Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar3.jpg')">
+                <img src="../images/043-boy-18.svg" alt="Boy Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar4.jpg')">
+                <img src="../images/047-girl-25.svg" alt="Girl Avatar 3" class="profile-avatar" onclick="selectAvatar(this, 'avatar5.jpg')">
+                </div>
+                <h2 class="profile-name" id="profileName">John Doe</h2>
+                <!-- Add a hidden input field to capture the selected avatar's path -->
+                <input type="hidden" id="avatarPath" name="avatarPath" value="043-boy-18.svg">
+                <button class="save-button" type="submit">Save Changes</button>
+            </div>
+        </div>
+    </form>
+    
 
     <script>
         let selectedAvatar = document.querySelector('.profile-avatar.active');
