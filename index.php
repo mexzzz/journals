@@ -41,7 +41,6 @@ if ($result->num_rows > 0) {
         <ul>
             <!-- <li><a href="#">Home</a></li> -->
             <li><a href="#">Journals</a></li>
-            <li><a href="pages/account.html">Account</a></li>
         </ul>
     </div>
 

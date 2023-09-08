@@ -32,7 +32,6 @@
         <ul>
             <!-- <li><a href="#">Home</a></li> -->
             <li><a href="../index.php">Journals</a></li>
-            <li><a href="account.html">Account</a></li>
         </ul>
     </div>
     
